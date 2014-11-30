@@ -19,7 +19,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <!--
 Element provides a modal dialog to control application settings. The settings may be generated from a json file.
-If used the json file must be in the same directory as the invoking page and must be named settings.json
+If used the json file must be in the same directory as the invoking page and must be named settingitems.json
 
 ##### Example
 
@@ -29,16 +29,8 @@ If used the json file must be in the same directory as the invoking page and mus
 @element aaa-settings-dialog
 @blurb Modal dialog for application settings
 @status alpha
-@homepage http://polymerlabs.github.io/seed-element
+@homepage https://github.com/Will-in-BC/aaa-settings-dialog.git
 
-Properties:
-Setting Items -- an array of objects describing each setting. 
-settings -- an object containg the value of the setings
-loadexternal --  if true a json file will read and used to populate setting items. I
-                 if used the json file must be in the same directory as the invoking page and must be named settings.json
-
-Public methods:
-show() -- causes the dialog to be shown
 
 Techniques illustrated:
   -- repeated and conditional template binding
@@ -60,7 +52,7 @@ html /deep/ .aaa-settings-box {
   padding:5px 20px;
 }
 </style>
-<polymer-element name="aaa-settings-dialog" attributes="settingItems settings loadexternal">
+<polymer-element name="aaa-settings-dialog">
   <template>
     <div id='contents'>
       <paper-action-dialog id='dialog' autoCloseDisabled backdrop>
@@ -92,8 +84,36 @@ html /deep/ .aaa-settings-box {
   </template>
   <script>
     Polymer({
-      settings: {},
-      settingItems: [],
+      publish: {
+       /**
+         * An array of objects that sets up the dialog. Either pass this array or use
+         * loadexternal to read the array from a json file. If you run the demo you will see an example 
+         * of the format of this array.
+         *
+         * @attribute settingItems
+         * @type array of objects
+         * @default empty
+         */
+        settingItems: [],
+       /**
+         * Specifies whether an external file is used to generate settingItems. The file used is settingitems.json located in the
+         * directory of the invoking page (not the directory of the element)
+         *
+         * @attribute loadexternal
+         * @type boolean
+         * @default false
+         */
+        loadexternal: false,
+       /**
+         * Returns an object that contains the values of the properties set by the dialog
+         *
+         * @attribute settings
+         * @type object
+         * @default empty
+         */
+        settings: {},
+      }, // end publish
+
       ready: function() {
         if (this.loadexternal) {
           this.settingItems = [];
@@ -103,6 +123,14 @@ html /deep/ .aaa-settings-box {
           this.$.ajax.go();
         }
       }, // end ready
+       /**
+         * Method that causes the dialog to be displayed
+         *
+         * @method show()
+         * @type method
+         * @default NA
+         */
+
       show: function() {
         this.$.dialog.toggle();
       },
