@@ -1,29 +1,25 @@
 {
-  "name": "seed-element",
-  "version": "0.0.0",
+  "name": "aaa-settings-dialog",
+  "version": "0.0.2",
+  "homepage": "https://github.com/Will-in-BC/aaa-settings-dialog",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Will Hopkins <williamr.hopkins@gmail.com>"
   ],
-  "description": "Element providing solution to no problem in particular.",
+  "description": "Modal dialog to solict application settings",
   "keywords": [
-    "web-component",
-    "web-components",
-    "polymer",
-    "seed"
+    "Polymer",
+    "web",
+    "components"
   ],
-  "main": "seed-element.html",
   "license": "MIT",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
   "ignore": [
-    "/.*",
-    "/tests/"
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.5.1",
-    "core-elements": "Polymer/core-elements#~0.5.1",
-    "paper-elements": "Polymer/paper-elements#~0.5.1"
-  },
-  "devDependencies": {
-    "web-component-tester": "Polymer/web-component-tester#^2.0.0-rc1"
+    "polymer": "~0.5.1"
   }
 }
