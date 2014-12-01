@@ -1,0 +1,38 @@
+{
+  "name": "seed-element",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "Element providing solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "seed"
+  ],
+  "main": "seed-element.html",
+  "license": "MIT",
+  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "ignore": [
+    "/.*",
+    "/tests/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.1",
+    "core-elements": "Polymer/core-elements#~0.5.1",
+    "paper-elements": "Polymer/paper-elements#~0.5.1"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^2.0.0-rc1"
+  },
+  "_release": "6304aa6cdd",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6304aa6cddede75f6d6cdee77d82c29ad3fbd4ee"
+  },
+  "_source": "git://github.com/Will-in-BC/aaa-settings-dialog.git",
+  "_target": "master",
+  "_originalSource": "Will-in-BC/aaa-settings-dialog",
+  "_direct": true
+}

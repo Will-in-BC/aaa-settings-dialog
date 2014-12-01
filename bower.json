@@ -1,0 +1,7 @@
+{
+  "name": "aaa-settings-dialog#gh-pages",
+  "private": true,
+  "dependencies": {
+    "seed-element": "Will-in-BC/aaa-settings-dialog#master"
+  }
+}
